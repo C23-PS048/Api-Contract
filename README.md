@@ -20,9 +20,9 @@
   Post
   ```/register```
 * **Data Params**  
- ** ```name``` as ```string```
- ** ```email``` as  ```string```, must be  ```Unique```
- ** ```password``` as ```string```, must be at least ```8 characters```
+*  ```name``` as ```string```
+*  ```email``` as  ```string```, must be  ```Unique```
+*  ```password``` as ```string```, must be at least ```8 characters```
 * **Headers**  
   Content-Type: application/json  
 * **Success Response:**  
