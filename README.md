@@ -14,23 +14,24 @@
 **Post /Register**
 ----
   Register all users in the system.
-* **URL Params**  
-  None
+* **Method**  
+  Post
+  * **Url**  
+  Post
+  ```/register```
 * **Data Params**  
- * name as string
- * email as string, must be unique
- * password as string, must be at least 8 characters
+ ** ```name``` as ```string```
+ ** ```email``` as  ```string```, must be  ```Unique```
+ ** ```password``` as ```string```, must be at least ```8 characters```
 * **Headers**  
   Content-Type: application/json  
 * **Success Response:**  
-* **Code:** 200  
-  **Content:**  
 ```
 {
-  users: [
-           {<user_object>},
-           {<user_object>},
-           {<user_object>}
-         ]
+  "error": false,
+  "message": "User Created"
 }
 ```
+* **Code:** 200  
+
+
