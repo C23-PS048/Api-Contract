@@ -109,7 +109,7 @@
   ``` /user/:id```
 * **Data Params**  
 
-*  ```name``` as  ```string```, must be  ```Unique```
+*  ```name``` as  ```string```
 *  ```foto``` as ```file```, must be a valid image file, max size 1MB
 *  ```password``` as ```string```, must be at least ```8 characters```
 * **Headers**  
