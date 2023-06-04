@@ -99,13 +99,13 @@
 
 
 
-**Post /user/:id**
+**Patch /user/:id**
 ----
   Update users in the system.
 * **Method**  
-  Post
+  Patch
   * **Url**  
-  Post
+
   ``` /user/:id```
 * **Data Params**  
 
