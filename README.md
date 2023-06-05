@@ -14,9 +14,9 @@
 ----
   Register  users in the system.
 * **Method**  
- Post
+    * ```Post```
  *  **Url**  
-    ```/register```
+    * ```/register```
 * **Request Body**  
 *  ```name``` as ```string```
 *  ```email``` as  ```string```, must be  ```Unique```
@@ -24,28 +24,30 @@
 * **Headers**  
   Content-Type: application/json  
 * **Success Response:**  
+   * **Code:** 200  
 ```
 {
   "error": false,
   "message": "User Created"
 }
 ```
-* **Code:** 200  
+
 
 
 **Post /Login**
 ----
  Login for users in the system.
 * **Method**  
-  Post
+    * ```Post```
  * **Url**  
-```/Login```
+    * ```/Login```
 * **Request Body**  
-*  ```email``` as  ```string```, must be  ```Unique```
-*  ```password``` as ```string```, must be at least ```8 characters```
+    *  ```email``` as  ```string```, must be  ```Unique```
+    *  ```password``` as ```string```, must be at least ```8 characters```
 * **Headers**  
   Content-Type: application/json  
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -57,20 +59,23 @@
     }
 }
 ```
-* **Code:** 200  
+
 
 
 **get /User/:id**
 ----
   Get  users data in the system.
 * **Method**  
-    * Get
+    * ```Get```
 * **Url**  
    * ```/user/:id```
+* **URL Params**  
+  *Required:* `id=[integer]`
 * **Headers**  
     * ```Authorization```: ```Bearer <token>```
     *  ```Content-Type: application/json  ```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -84,15 +89,17 @@
   }
 }
 ```
-* **Code:** 200  
+
 
 **Patch /user/:id**
 ----
   Update users in the system.
 * **Method**  
-  Patch
+     * ```Patch```
  * **Url**  
-  ``` /user/:id```
+    *  ``` /user/:id```
+ * **URL Params**  
+    *Required:* `id=[integer]`
 * **Request Body**  
     *  ```name``` as  ```string```
     *  ```foto``` as ```file```, must be a valid image file, max size 1MB
@@ -101,6 +108,7 @@
     * ```Authorization```: ```Bearer <token>```
     *  ```Content-Type: application/json```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
   "error": false,
@@ -108,7 +116,7 @@
 }
 ```
 
-* **Code:** 200  
+
 
 
 # UserPlant
@@ -129,15 +137,16 @@
 ----
   Get all users plant  data in the system.
 * **Method**  
-Get
+    * ```Get```
 * **Url**  
-    ```/user/:id/plant```
+    *   ```/user/:id/plant```
 * **URL Params**  
   *Required:* `id=[integer]`
 * **Headers**  
-* ```Authorization```: ```Bearer <token>```
-*  ```Content-Type: application/json```
+    * ```Authorization```: ```Bearer <token>```
+    *  ```Content-Type: application/json```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -150,7 +159,7 @@ Get
 }
 
 ```
-* **Code:** 200  
+
 
 **Post /userPlant**
 ----
@@ -170,29 +179,32 @@ Get
     * ```Authorization```: ```Bearer <token>```
     * ``` Content-Type: application/json ``` 
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
   "error": false,
   "message": "Plant Saved"
 }
 ```
-* **Code:** 200  
+
 
 
 **get /userPlant/:id**
 ----
+ get detail of specific users plant in the system.
+
+ 
+* **Method**  
+    * ```Get```
+ * **Url**  
+    *  ``` /userPlant/:id```
 * **URL Params**  
   *Required:* `id=[integer]`
-  get detail of specific users plant in the system.
-* **Method**  
-  get
- * **Url**  
-  ``` /userPlant/:id```
-
 * **Headers**  
     * ```Authorization```: ```Bearer <token>```
     *  ```Content-Type: application/json```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -209,7 +221,7 @@ Get
 }
 ```
 
-* **Code:** 200  
+
 
 
 
@@ -217,12 +229,13 @@ Get
 **PATCH /userPlant/:id**
 ----
  update users plant in the system.
- * **URL Params**  
-  *Required:* `id=[integer]`
+
 * **Method**  
   * ```Patch```
  * **Url**  
     * ```/userPlant/:id```
+ * **URL Params**  
+  *Required:* `id=[integer]`
 * **Request Body**  
     *  ```location``` as ```string```
     *  ```startDate``` as  ```long```
@@ -234,13 +247,14 @@ Get
     * ```Authorization```: ```Bearer <token>```
     * ``` Content-Type: application/json ``` 
 * **Success Response:**  
+  * **Code:** 200
 ```
 {
   "error": false,
   "message": "Plant Updated"
 }
 ```
-* **Code:** 200  
+
 
 **Delete /userPlant/:id**
 ----
@@ -251,18 +265,18 @@ Get
   * ```Delete```
  * **Url**  
     * ```/userPlant/:id```
-
 * **Headers**  
     * ```Authorization```: ```Bearer <token>```
     * ``` Content-Type: application/json ``` 
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
   "error": false,
   "message": "Plant Deleted"
 }
 ```
-* **Code:** 200  
+
 
 # Plant
 * Plant object
@@ -286,7 +300,7 @@ Get
 ----
   Get  plant data in the system.
 * **Method**  
-    * Get
+    * ```Get```
 * **Url**  
    * ```/plant/:slug```
 * **URL Params**  
@@ -294,6 +308,7 @@ Get
 * **Headers** 
     *  ```Content-Type: application/json  ```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -312,18 +327,19 @@ Get
   }
 }
 ```
-* **Code:** 200  
+
 
 **Get /plant**
 ----
   Get  plant data in the system.
 * **Method**  
-    * Get
+    * ```Get```
 * **Url**  
    * ```/plant```
 * **Headers**  
     *  ```Content-Type: application/json  ```
-* **Success Response:**  
+* **Success Response:** 
+  * **Code:** 200   
 ```
 {
     "error": false,
@@ -337,7 +353,7 @@ Get
   }
 }
 ```
-* **Code:** 200  
+
 
 # Disease
 * Disease object
@@ -356,7 +372,7 @@ Get
 ----
   Get  disease data in the system.
 * **Method**  
-    * Get
+    * ```Get```
 * **Url**  
    * ```/disease/:slug```
 * **URL Params**  
@@ -364,6 +380,7 @@ Get
 * **Headers** 
     *  ```Content-Type: application/json  ```
 * **Success Response:**  
+   * **Code:** 200  
 ```
 {
     "error": false,
@@ -377,18 +394,19 @@ Get
   }
 }
 ```
-* **Code:** 200  
+
 
 **Get /disease**
 ----
   Get  disease data in the system.
 * **Method**  
-    * Get
+    * ```Get```
 * **Url**  
    * ```/disease```
 * **Headers**  
     *  ```Content-Type: application/json  ```
 * **Success Response:**  
+  * **Code:** 200  
 ```
 {
     "error": false,
@@ -402,5 +420,5 @@ Get
   }
 }
 ```
-* **Code:** 200  
+
 
