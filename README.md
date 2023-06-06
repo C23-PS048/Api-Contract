@@ -85,7 +85,7 @@
                       username: string
                       email: string
                       password:hash
-                      foto:File (nullable/optional)
+                      foto:String
   }
 }
 ```
