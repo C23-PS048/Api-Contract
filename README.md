@@ -80,12 +80,12 @@
 {
     "error": false,
     "message": "success",
-    "loginResult": {
-                      id: integer
-                      username: string
-                      email: string
-                      password:hash
-                      foto:String
+    "userResult": {
+                      id: integer,
+                      username: string,
+                      email: string,
+                      password:hash,
+                      foto:String,
   }
 }
 ```
