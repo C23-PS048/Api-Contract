@@ -289,6 +289,7 @@
     description:String,
     plantTips:String,
     humidity:String,
+    wateringTips:String,
     wateringFrequency:String,
     temperature:String,
     image:arrayof(String)
@@ -321,6 +322,7 @@
                         "description":String,
                         "plantTips":String,
                         "humidity":String,
+                        "wateringTips":String,
                         "wateringFrequency":String,
                         "temperature":String,
                         "image":[String,string,String]
