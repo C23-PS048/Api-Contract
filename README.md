@@ -101,9 +101,9 @@
  * **URL Params**  
     *Required:* `id=[integer]`
 * **Request Body**  
-    *  ```name``` as  ```string```
+
     *  ```foto``` as ```file```, must be a valid image file, max size 1MB
-    *  ```password``` as ```string```, must be at least ```8 characters```
+   
 * **Headers**  
     * ```Authorization```: ```Bearer <token>```
     *  ```Content-Type: application/json```
