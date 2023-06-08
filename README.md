@@ -363,6 +363,7 @@
     slug: string (Unique),
     plantName: string,
     diseaseName:string,
+    cause:String,
     care:String,
   
 }
@@ -390,6 +391,7 @@
                         "slug": string (Unique),
                         "plantName": string,
                         "diseaseName":string,
+                            cause:String,
                         "care":String,
   }
 }
