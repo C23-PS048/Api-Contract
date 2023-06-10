@@ -125,6 +125,7 @@
 {
   id: integer
   location: string
+  disease:string(nullable)
   startDate: long
   lastScheduledDate: long
   nextScheduledDate: long
@@ -170,6 +171,7 @@
     *  ```/userPlant```
 * **Request Body**  
     *  ```location``` as ```string```
+    *  ```disease``` as ```string```,```optional/nullable```
     *  ```startDate``` as  ```long```
     *  ```lastScheduledDate``` as  ```long```
     *  ```nextScheduledDate``` as ```long```
@@ -212,6 +214,7 @@
     "userPlant": {
                     id: integer
                     location: string
+                    disease: string
                     startDate: long
                     lastScheduledDate: long
                     nextScheduledDate: long
@@ -238,6 +241,7 @@
   *Required:* `id=[integer]`
 * **Request Body**  
     *  ```location``` as ```string```
+    *  ```disease``` as ```string```
     *  ```startDate``` as  ```long```
     *  ```lastScheduledDate``` as  ```long```
     *  ```nextScheduledDate``` as ```long```
